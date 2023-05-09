@@ -4,7 +4,6 @@ const commentsContainer = document.querySelector('.comments_face');
 
 element.addEventListener('submit', event => {
   event.preventDefault();
-  console.log('Form submission cancelled.', commentArea.value);
 
   let comment = document.createElement('div')
   comment.className = 'comments'
@@ -57,13 +56,9 @@ let answersArr = []
 questions.addEventListener('click', function(event) {
 
   if (event.target.classList.contains('survey_button')) {
-    console.log('good');
     answersArr.push(event.target.childNodes[1].childNodes[1].textContent);
-    console.log(answersArr);
   } else {
-    console.log('bad');
     answersArr.push(event.target.textContent);
-    console.log(answersArr);
   }
 });
 
